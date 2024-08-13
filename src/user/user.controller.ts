@@ -12,12 +12,10 @@ import {
 } from '@nestjs/common';
 import { ApiOkResponse, ApiTags } from '@nestjs/swagger';
 import { UserService } from './user.service';
-import { User } from './entities/user.entity';
 import { CreateUserRequestDto, CreateUserResponseDto } from './dto/create-user-request.dto';
 import { TransformInterceptor } from '../public/interceptors/transform.interceptor';
 import { UpdateUserDto } from './dto/update-user.dto';
 import { JwtAuthGuard } from '../auth/jwt-auth.guard';
-import { query } from 'express';
 
 @ApiTags()
 @Controller('user')
